@@ -1,28 +1,18 @@
-# flutter_styled_toast
+# flutter_styled_toast_plus
 
 A Styled Toast Flutter package. 
 You can highly customize toast ever.
 Beautify toast with a series of animations and make toast more beautiful.
 
-## demo
-
-<img src="https://raw.githubusercontent.com/JackJonson/flutter_styled_toast/master/screenshots/OverallAnimations.gif" width="50%">
-
-## Null safety
-```yaml
-dependencies:
-  flutter_styled_toast: ^2.1.3
-```
-
 ## Getting Started
 
 ```yaml
 dependencies:
-  flutter_styled_toast: ^1.5.2+3
+  flutter_styled_toast_plus: ^3.0.0
 ```
 
 ```dart
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:flutter_styled_toast_plus/flutter_styled_toast.dart';
 ```
 
 ```dart
