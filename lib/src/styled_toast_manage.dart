@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_styled_toast/src/styled_toast.dart';
+import 'package:flutter_styled_toast_plus/src/styled_toast.dart';
 
 /// The method to dismiss all toast.
 void dismissAllToast({bool showAnim = false}) {

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_styled_toast/src/custom_animation.dart';
-import 'package:flutter_styled_toast/src/styled_toast.dart';
-import 'package:flutter_styled_toast/src/styled_toast_enum.dart';
+import 'package:flutter_styled_toast_plus/src/custom_animation.dart';
+import 'package:flutter_styled_toast_plus/src/styled_toast.dart';
+import 'package:flutter_styled_toast_plus/src/styled_toast_enum.dart';
 
 /// Toast theme, only for default content widget.
 ///

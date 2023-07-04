@@ -1,6 +1,6 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:flutter_styled_toast_plus/flutter_styled_toast.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

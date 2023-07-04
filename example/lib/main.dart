@@ -1,7 +1,6 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:flutter_styled_toast_plus/flutter_styled_toast.dart';
 
 import 'blur_transition.dart';
 import 'custom_toast_content_widget.dart';
