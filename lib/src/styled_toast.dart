@@ -45,8 +45,8 @@ ToastFuture showToast(
   EdgeInsetsGeometry? textPadding,
   double toastHorizontalMargin = _defaultHorizontalMargin,
   Color? backgroundColor,
+  BoxShadow? shadow,
   BorderRadius? borderRadius,
-  ShapeBorder? shapeBorder,
   VoidCallback? onDismiss,
   TextDirection? textDirection,
   bool? dismissOtherToast,
@@ -84,25 +84,23 @@ ToastFuture showToast(
   backgroundColor ??= _toastTheme?.backgroundColor ?? const Color(0x99000000);
   borderRadius ??= _toastTheme?.borderRadius ?? BorderRadius.circular(5.0);
 
-  shapeBorder ??= _toastTheme?.shapeBorder ??
-      RoundedRectangleBorder(
-        borderRadius: borderRadius,
-      );
-
   textDirection ??= _toastTheme?.textDirection ?? TextDirection.ltr;
 
   textAlign ??= _toastTheme?.textAlign ?? TextAlign.center;
 
   fullWidth ??= _toastTheme?.fullWidth ?? false;
 
+  shadow ??= _toastTheme?.boxShadow;
+
   Widget widget = Container(
     margin: EdgeInsets.symmetric(horizontal: toastHorizontalMargin),
     width: fullWidth
         ? MediaQuery.of(context).size.width - (toastHorizontalMargin)
         : null,
-    decoration: ShapeDecoration(
+    decoration: BoxDecoration(
       color: backgroundColor,
-      shape: shapeBorder,
+      borderRadius: borderRadius,
+      boxShadow: shadow != null ? [shadow] : null, //todo
     ),
     padding: textPadding,
     child: Text(
@@ -293,9 +291,6 @@ class StyledToast extends StatefulWidget {
   /// Text style for content.
   final TextStyle? textStyle;
 
-  /// Shape for the container.
-  final ShapeBorder? shapeBorder;
-
   /// Toast show duration.
   final Duration? duration;
 
@@ -372,7 +367,6 @@ class StyledToast extends StatefulWidget {
     this.backgroundColor,
     this.textPadding,
     this.textStyle = const TextStyle(fontSize: 16.0, color: Colors.white),
-    this.shapeBorder,
     this.duration,
     this.animDuration,
     this.toastPositions,
@@ -469,7 +463,7 @@ class _StyledToastState extends State<StyledToast> {
           backgroundColor: mBackgroundColor,
           textPadding: mTextPadding,
           textStyle: mTextStyle,
-          shapeBorder: widget.shapeBorder,
+
           duration: widget.duration,
           animDuration: widget.animDuration,
           toastPositions: widget.toastPositions,

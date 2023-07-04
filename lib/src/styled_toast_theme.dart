@@ -19,6 +19,9 @@ class StyledToastTheme extends InheritedWidget {
   /// Border radius.
   final BorderRadius? borderRadius;
 
+  /// Shadow
+  final BoxShadow? boxShadow;
+
   /// Background color.
   final Color? backgroundColor;
 
@@ -27,9 +30,6 @@ class StyledToastTheme extends InheritedWidget {
 
   /// Text style for content.
   final TextStyle? textStyle;
-
-  /// Shape for the container.
-  final ShapeBorder? shapeBorder;
 
   /// Toast show duration.
   final Duration? duration;
@@ -99,10 +99,10 @@ class StyledToastTheme extends InheritedWidget {
     this.textAlign,
     this.textDirection,
     this.borderRadius,
+    this.boxShadow,
     this.backgroundColor,
     this.textPadding,
     this.textStyle,
-    this.shapeBorder,
     this.duration,
     this.animDuration,
     this.toastPositions,

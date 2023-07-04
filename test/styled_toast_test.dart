@@ -105,10 +105,6 @@ void main() {
         toastHorizontalMargin: 40,
         backgroundColor: Colors.black45,
         borderRadius: BorderRadius.circular(20),
-        shapeBorder: RoundedRectangleBorder(
-            side: BorderSide(
-                color: Colors.blue, width: 1.0, style: BorderStyle.solid),
-            borderRadius: BorderRadius.circular(5)),
         onDismiss: () {},
         textDirection: TextDirection.ltr,
         dismissOtherToast: true,
